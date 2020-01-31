@@ -6,23 +6,41 @@ namespace CowboyCafe.Data
 {
     public class AngryChicken
     {
+        /// <summary>
+        /// The price of the angry chicken
+        /// </summary>
         public double Price {
             get { return 5.99; }
         }
-
+        
+        /// <summary>
+        /// The calories of the angry chicken
+        /// </summary>
         public uint Calories {
             get { return 190; }
         }
 
+        /// <summary>
+        /// If the angry chicken shoud be served with pickle
+        /// </summary>
         private bool pickle = true;
 
+        /// <summary>
+        /// If the angry chicken shoud be served with pickle
+        /// </summary>
         public bool Pickle {
             get { return pickle; }
             set { pickle = value; }
         }
 
+        /// <summary>
+        /// If the angry chicken should be served with bread
+        /// </summary>
         public bool Bread { get; set; } = true;
 
+        /// <summary>
+        /// Special instructions for the preparation of the chicken
+        /// </summary>
         public List<string> SpecialInstructions {
             get {
                 List<string> instructions = new List<string>();

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class DakotaDouble
+    public class DakotaDoubleBurger
     {
         public double Price
         {

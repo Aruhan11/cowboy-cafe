@@ -5,12 +5,12 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// A class representing the Pan de Campo side
+    /// A class representing the Baked Beans side
     /// </summary>
-    public class PandeCampo: Side
+    public class BakedBeans: Side
     {
         /// <summary>
-        /// The calories of Pan de Campo for different sizes
+        /// The calories of Baked Beans for different sizes
         /// </summary>
         public override uint Calories
         {
@@ -19,11 +19,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 227;
+                        return 312;
                     case Size.Medium:
-                        return 269;
+                        return 378;
                     case Size.Large:
-                        return 367;
+                        return 410;
                     default:
                         throw new NotImplementedException();
                 }
@@ -31,7 +31,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// The price of Pan de Campo for different sizes
+        /// The price of Baked Beans for different sizes
         /// </summary>
         public override double Price
         {
@@ -50,5 +50,6 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
     }
 }

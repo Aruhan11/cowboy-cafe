@@ -4,13 +4,9 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class CowboyCoffee: Drink
+    public class Water: Drink
     {
-        public bool RoomForCream { get; set; } = false;
-
-        public override bool Ice { get; set; } = false;
-
-        public bool Decaf { get; set; } = false;
+        public bool Lemon { get; set; } = false;
 
         public override double Price
         {
@@ -19,11 +15,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 0.60;
+                        return 0.12;
                     case Size.Medium:
-                        return 1.10;
+                        return 0.12;
                     case Size.Large:
-                        return 1.60;
+                        return 0.12;
                     default:
                         throw new NotImplementedException();
                 }
@@ -37,37 +33,35 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 3;
+                        return 0;
                     case Size.Medium:
-                        return 5;
+                        return 0;
                     case Size.Large:
-                        return 7;
+                        return 0;
                     default:
                         throw new NotImplementedException();
                 }
             }
         }
 
-
         public override List<string> SpecialInstructions
         {
             get
             {
                 List<string> instructions = new List<string>();
-                if (Ice)
+                if (!Ice)
                 {
-                    instructions.Add("Add Ice");
+                    instructions.Add("Hold Ice");
                 }
-                if (RoomForCream)
+                if (Lemon)
                 {
-                    instructions.Add("Room for Cream");
+                    instructions.Add("Add Lemon");
                 }
 
                 return instructions;
 
             }
         }
-
 
     }
 }

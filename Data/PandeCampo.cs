@@ -7,7 +7,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Pan de Campo side
     /// </summary>
-    public class PandeCampo: Side
+    public class PanDeCampo : Side
     {
         /// <summary>
         /// The calories of Pan de Campo for different sizes

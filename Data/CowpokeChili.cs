@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CowpokeChili.cs
+ * Purpose: the class create Cowpoke Chili entree
+ */
+using System;
 using System.Collections.Generic;
 
 namespace CowboyCafe.Data

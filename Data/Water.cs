@@ -1,13 +1,27 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: Water.cs
+ * Purpose: the class create Water dirnk
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the Water dirnk
+    /// </summary>
     public class Water: Drink
     {
+        /// <summary>
+        /// if serve lemon or not
+        /// </summary>
         public bool Lemon { get; set; } = false;
 
+        /// <summary>
+        /// the price of water by different sizes
+        /// </summary>
         public override double Price
         {
             get
@@ -26,6 +40,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// the calories of water by different sizes
+        /// </summary>
         public override uint Calories
         {
             get
@@ -44,6 +61,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// the special instructions of water drink
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

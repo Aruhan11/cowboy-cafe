@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: DakotaDoubleBurger.cs
+ * Purpose: the class create Dakota Double Burger entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CowboyCoffee.cs
+ * Purpose: the class create cowboy coffee drink
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

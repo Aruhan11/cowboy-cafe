@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: BakedBeans.cs
+ * Purpose: the class create Baked Beans side
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

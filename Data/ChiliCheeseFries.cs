@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: ChiliCheeseFries.cs
+ * Purpose: the class create Chili Chesse Fries side
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

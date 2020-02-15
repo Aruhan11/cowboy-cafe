@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: RustlersRibs.cs
+ * Purpose: the class create Rustler's Ribs entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

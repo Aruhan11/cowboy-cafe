@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CornDodgers.cs
+ * Purpose: the class create Corn Dodgers side
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

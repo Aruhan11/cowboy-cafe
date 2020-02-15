@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: Drink.cs
+ * Purpose: the class create base class of drink
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

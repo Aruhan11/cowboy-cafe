@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: PecosPulledPork.cs
+ * Purpose: the class create Pecos Pulled Pork entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

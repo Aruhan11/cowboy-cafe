@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: TexasTripleBurger.cs
+ * Purpose: the class create Texas Triple Burger entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

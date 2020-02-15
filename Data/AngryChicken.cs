@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: AngryChicken.cs
+ * Purpose: the class create Angry Chicken entree
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

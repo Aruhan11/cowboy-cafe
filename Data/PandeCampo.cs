@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: PanDeCampo.cs
+ * Purpose: the class create Pan de Campo side
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

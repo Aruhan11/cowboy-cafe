@@ -4,14 +4,29 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the cowboy coffee drink
+    /// </summary>
     public class CowboyCoffee: Drink
     {
+        /// <summary>
+        /// If the cowboy coffee shoud be served with room for cream
+        /// </summary>
         public bool RoomForCream { get; set; } = false;
 
+        /// <summary>
+        /// If the cowboy coffee shoud be served with ice
+        /// </summary>
         public override bool Ice { get; set; } = false;
 
+        /// <summary>
+        /// If the cowboy coffee shoud be served with decaf
+        /// </summary>
         public bool Decaf { get; set; } = false;
 
+        /// <summary>
+        /// The price of Cowboy Coffee for different sizes
+        /// </summary>
         public override double Price
         {
             get
@@ -30,6 +45,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// The calories of Cowboy Coffee for different sizes
+        /// </summary>
         public override uint Calories
         {
             get
@@ -48,7 +66,9 @@ namespace CowboyCafe.Data
             }
         }
 
-
+        /// <summary>
+        /// Special instructions for the preparation of the cowboy coffee
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

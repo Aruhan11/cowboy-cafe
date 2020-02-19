@@ -22,12 +22,20 @@
         
         <StackPanel Grid.Column="0">
             <TextBlock TextAlignment="Center">Entree</TextBlock>
-            <Button>Cowpoke Chili</Button>
+            <Button Name="AddCowpokeChiliButton">Cowpoke Chili</Button>
             <Button Name="AddTrialBurgerButton">Trial Burger</Button>
         </StackPanel>
-        
-        <StackPanel Grid.Column="1" >
-            <TextBlock> Side</TextBlock>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock TextAlignment="Center"></TextBlock>
+           
         </StackPanel>
+
+        <StackPanel Grid.Column="3">
+            <TextBlock>Order</TextBlock>
+            <ListView Name="OrderListView"></ListView>
+       </StackPanel>
+
+               
     </Grid>
 </UserControl>

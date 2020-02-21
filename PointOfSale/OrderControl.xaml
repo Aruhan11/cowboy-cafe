@@ -24,6 +24,9 @@
             <TextBlock TextAlignment="Center">Entree</TextBlock>
             <Button Name="AddCowpokeChiliButton">Cowpoke Chili</Button>
             <Button Name="AddTrialBurgerButton">Trial Burger</Button>
+            <Button Name="AddRustlersRibsButton">Trial Burger</Button>
+            <Button Name="AddPecosPulledPorkButton">Trial Burger</Button>
+            <Button Name="AddTrialBurgerButton">Trial Burger</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="1">

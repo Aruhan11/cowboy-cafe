@@ -12,6 +12,7 @@
             <Setter Property="FontSize" Value="18"/>
         </Style>
     </UserControl.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -21,24 +22,36 @@
         </Grid.ColumnDefinitions>
         
         <StackPanel Grid.Column="0">
-            <TextBlock TextAlignment="Center">Entree</TextBlock>
+            <TextBlock TextAlignment="Center">Entrees</TextBlock>
             <Button Name="AddCowpokeChiliButton">Cowpoke Chili</Button>
-            <Button Name="AddTrialBurgerButton">Trial Burger</Button>
-            <Button Name="AddRustlersRibsButton">Trial Burger</Button>
-            <Button Name="AddPecosPulledPorkButton">Trial Burger</Button>
-            <Button Name="AddTrialBurgerButton">Trial Burger</Button>
+            <Button Name="AddRustlersRibsButton">Rustler's Ribs</Button>
+            <Button Name="AddPecosPulledPorkButton">Pecos Pulled Pork</Button>
+            <Button Name="AddTrailBurgerButton">Trail Burger</Button>
+            <Button Name="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
+            <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
+            <Button Name="AddAngryChickenButton">Angry Chicken</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="1">
-            <TextBlock TextAlignment="Center"></TextBlock>
-           
+            <TextBlock TextAlignment="Center">Sides</TextBlock>
+            <Button Name="AddChiliCheeseFriesButton">Chili Cheese Fries</Button>
+            <Button Name="AddCornDodgersButton">Corn Dodgers</Button>
+            <Button Name="AddPandeCampoButton">Pan de Campo</Button>
+            <Button Name="AddBakedBeansButton">Baked Beans</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <TextBlock TextAlignment="Center">Drinks</TextBlock>
+            <Button Name="AddJerkedSodaButton">Jerked Soda</Button>
+            <Button Name="AddTexasTeaButton">Texas Tea</Button>
+            <Button Name="AddCowboyCoffeeButton">Cowboy Coffee</Button>
+            <Button Name="AddWaterButton">Water</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="3">
-            <TextBlock>Order</TextBlock>
+            <TextBlock TextAlignment="Center">Order</TextBlock>
             <ListView Name="OrderListView"></ListView>
-       </StackPanel>
-
-               
+        </StackPanel>
+        
     </Grid>
 </UserControl>

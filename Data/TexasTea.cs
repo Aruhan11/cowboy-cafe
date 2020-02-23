@@ -107,5 +107,13 @@ namespace CowboyCafe.Data
             }
         }
 
+        public override string ToString()
+        {
+            
+            return Size.ToString() + "Texas Tea";
+               
+
+        }
+
     }
 }

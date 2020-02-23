@@ -57,5 +57,11 @@ namespace CowboyCafe.Data
             }
         }
 
+        public override string ToString()
+        {
+        
+            return Size.ToString() + "Chili Cheese Fries";
+        }
+
     }
 }

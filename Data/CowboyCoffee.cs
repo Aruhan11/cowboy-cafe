@@ -93,6 +93,21 @@ namespace CowboyCafe.Data
             }
         }
 
+        public override string ToString()
+        {
+            switch (Decaf)
+            {
+                
+                case true:
+                    return Size.ToString() + "Decaf Cowboy Coffee";
+                case false:
+                    return Size.ToString() + "Cowboy Coffee";
+                default:
+                    throw new NotImplementedException();
+            }
+        
+        }
+
 
     }
 }

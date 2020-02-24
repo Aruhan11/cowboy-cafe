@@ -56,9 +56,13 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Return the strig representation of this object
+        /// </summary>
+        /// <returns>The string describing the baked beans</returns>
         public override string ToString()
         {
-            return Size.ToString() + "Baked Beans";
+            return Size.ToString() + " Baked Beans";
         }
 
     }

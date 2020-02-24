@@ -132,9 +132,13 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Return the strig representation of this object
+        /// </summary>
+        /// <returns>The string describing the trail burger</returns>
         public override string ToString()
         {
-            return "Triple Burger";
+            return "Trail Burger";
         }
 
     }

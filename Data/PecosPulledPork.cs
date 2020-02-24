@@ -78,6 +78,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Return the strig representation of this object
+        /// </summary>
+        /// <returns>The string describing the pecos pulled pork</returns>
         public override string ToString()
         {
             return "Pecos Pulled Pork";

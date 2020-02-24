@@ -187,6 +187,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Return the strig representation of this object
+        /// </summary>
+        /// <returns>The string describing the dakota double burger</returns>
         public override string ToString()
         {
             return "Dakota Double Burger";

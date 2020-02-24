@@ -223,6 +223,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Return the strig representation of this object
+        /// </summary>
+        /// <returns>The string describing the texas truole burger</returns>
         public override string ToString()
         {
             return "Texas Triple Burger";

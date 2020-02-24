@@ -93,15 +93,18 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Return the strig representation of this object
+        /// </summary>
+        /// <returns>The string describing the cowboy coffee</returns>
         public override string ToString()
         {
             switch (Decaf)
-            {
-                
+            {                
                 case true:
-                    return Size.ToString() + "Decaf Cowboy Coffee";
+                    return Size.ToString() + " Decaf Cowboy Coffee";
                 case false:
-                    return Size.ToString() + "Cowboy Coffee";
+                    return Size.ToString() + " Cowboy Coffee";
                 default:
                     throw new NotImplementedException();
             }

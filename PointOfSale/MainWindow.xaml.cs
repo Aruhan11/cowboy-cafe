@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: MainWindow.xaml.cs
+ * Purpose: show the interface
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +26,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// defalut set
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

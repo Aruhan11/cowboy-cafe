@@ -7,6 +7,28 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="300">
     <Grid>
+        <Grid.ColumnDefinitions>
+            
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+            
+
+        </Grid.RowDefinitions>
+
+
+
+
+
         <StackPanel>
             <TextBlock>Order</TextBlock>
             <ListBox ItemsSource="{Binding Path=Items}">

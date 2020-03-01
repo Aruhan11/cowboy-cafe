@@ -82,7 +82,7 @@ namespace CowboyCafe.DataTests
             Assert.Equal(items.Length, order.Items.Count());
             foreach (var item in items)
             {
-                Assert.Contains(item, order.Items);0
+                Assert.Contains(item, order.Items);
             }
         }
         // Removing something from the order should

@@ -51,7 +51,10 @@
         <StackPanel Grid.Column="3">
             <TextBlock TextAlignment="Center">Order</TextBlock>
             <ListView Name="OrderListView"></ListView>
+            
         </StackPanel>
+
         
+
     </Grid>
 </UserControl>

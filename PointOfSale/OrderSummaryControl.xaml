@@ -6,45 +6,13 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="300">
+
+    
+
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            
-            <ColumnDefinition>
-            </ColumnDefinition>
-            <ColumnDefinition>
-            </ColumnDefinition>
-            
-        </Grid.ColumnDefinitions>
-        
-        <Grid.RowDefinitions>
-            <RowDefinition>
-            </RowDefinition>
-            <RowDefinition>
-            </RowDefinition>
-            
 
-        </Grid.RowDefinitions>
+     
 
-
-
-
-
-        <StackPanel>
-            <TextBlock>Order</TextBlock>
-            <ListBox ItemsSource="{Binding Path=Items}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="25"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding}"/>
-                            <Button Grid.Column="1" Click="OnRemoveItem">X</Button>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </StackPanel>
     </Grid>
 </UserControl>

@@ -25,6 +25,11 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+
+        //public string s = "hello";
+        
+        
+        
         /// <summary>
         /// defalut set
         /// </summary>
@@ -59,7 +64,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnAddCowpokeChiliButtonClicked(Object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new CowpokeChili()); 
+            OrderListView.Items.Add(new CowpokeChili());
+            OrderListView.Items.Add(new CowpokeChili().Price);
         }
 
         /// <summary>

@@ -50,8 +50,26 @@
 
         <StackPanel Grid.Column="3">
             <TextBlock TextAlignment="Center">Order</TextBlock>
-            <ListView Name="OrderListView"></ListView>
-            
+            <ListView Name="OrderListView" ItemsSource="{Binding Path=Items}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                            <TextBlock Text="{Binding}" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView Name="OrderListPriceView" ItemsSource="{Binding Path=Items}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock Text="{Binding Path}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackPanel>
 
         

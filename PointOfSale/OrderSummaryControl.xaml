@@ -20,28 +20,33 @@
 
         <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="0">Order</TextBlock>
 
-        <ListBox Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Path=Items}">
-            <ListBox.ItemTemplate>
+        <ListView Name="nameList" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Path=Items}">
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="25"/>
+                            </Grid.ColumnDefinitions>
                         <TextBlock Text="{Binding}"/>
+                        <Button Grid.Column="1" Click="OnRemoveItem">X</Button>
                     </Grid>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            </ListView.ItemTemplate>
+        </ListView>
 
-        <ListBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=Items}">
-            <ListBox.ItemTemplate>
+        <ListView Name="priceList" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=Items}">
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <TextBlock Text="{Binding Path=Price}"/>
                     </Grid>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            </ListView.ItemTemplate>
+        </ListView>
 
-        <TextBlock TextAlignment="Left" Grid.Column="0" Grid.Row="2">Subtotal</TextBlock>
-        <TextBlock TextAlignment="Left" Grid.Column="1" Grid.Row="2">$</TextBlock>
+        <TextBlock TextAlignment="Left" Grid.Column="0" Grid.Row="2" >Subtotal</TextBlock>
+        <TextBlock TextAlignment="Left" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Subtotal, StringFormat=c}">$</TextBlock>
 
     </Grid>
 

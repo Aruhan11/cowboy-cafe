@@ -32,9 +32,7 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
-            
-            
-
+           
         }
 
         

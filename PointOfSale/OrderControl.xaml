@@ -12,6 +12,14 @@
             <Setter Property="FontSize" Value="18"/>
         </Style>
     </UserControl.Resources>
-    
-    
+
+    <DockPanel>
+        <local:MenuItemSelectionControl DockPanel.Dock="Left"  >
+        </local:MenuItemSelectionControl>
+        
+        
+
+    </DockPanel>
+
+
 </UserControl>

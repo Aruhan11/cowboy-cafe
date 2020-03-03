@@ -26,10 +26,6 @@ namespace PointOfSale
     public partial class OrderControl : UserControl
     {
 
-        //public string s = "hello";
-        
-        
-        
         /// <summary>
         /// defalut set
         /// </summary>

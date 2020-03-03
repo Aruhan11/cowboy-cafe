@@ -6,13 +6,43 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="300">
-
-    
-
-
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
 
-     
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="0">Order</TextBlock>
+
+        <ListBox Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Path=Items}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="{Binding}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=Items}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="{Binding Path=Price}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock TextAlignment="Left" Grid.Column="0" Grid.Row="2">Subtotal</TextBlock>
+        <TextBlock TextAlignment="Left" Grid.Column="1" Grid.Row="2">$</TextBlock>
 
     </Grid>
+
 </UserControl>

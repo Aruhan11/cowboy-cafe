@@ -52,8 +52,7 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new CowpokeChili());
-                
-                
+                               
             }
         }
 
@@ -68,7 +67,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new RustlersRibs());
-
             }
         }
 
@@ -83,7 +81,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new PecosPulledPork());
-
             }
         }
 
@@ -98,7 +95,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new TrailBurger());
-
             }
         }
 
@@ -113,7 +109,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new DakotaDoubleBurger());
-
             }
         }
 
@@ -128,7 +123,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new TexasTripleBurger());
-
             }
         }
 
@@ -143,7 +137,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new AngryChicken());
-
             }
         }
 
@@ -158,7 +151,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new ChiliCheeseFries());
-
             }
         }
 
@@ -173,7 +165,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new CornDodgers());
-
             }
         }
 
@@ -188,7 +179,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new PanDeCampo());
-
             }
         }
 
@@ -203,7 +193,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new BakedBeans());
-
             }
         }
 
@@ -218,7 +207,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new JerkedSoda());
-
             }
         }
 
@@ -233,7 +221,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new TexasTea());
-
             }
         }
 
@@ -248,7 +235,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new CowboyCoffee());
-
             }
         }
 
@@ -263,7 +249,6 @@ namespace PointOfSale
             if (DataContext is Order data)
             {
                 data.Add(new Water());
-
             }
         }
     }

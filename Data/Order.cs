@@ -13,7 +13,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// the last order number
         /// </summary>
-        private uint lastOrderNumber;
+        private static uint lastOrderNumber = 0;
 
         /// <summary>
         /// the list of items in the order
@@ -28,12 +28,12 @@ namespace CowboyCafe.Data
         /// <summary>
         /// the subtotal of the order
         /// </summary>
-        public double Subtotal { get; }
+        public double Subtotal { get; private set; }
         
         /// <summary>
         /// the current order number
         /// </summary>
-        public uint OrderNumber { get; }
+        public uint OrderNumber { get { return lastOrderNumber++;  } }
 
         /// <summary>
         /// the property changed event handler
@@ -47,8 +47,10 @@ namespace CowboyCafe.Data
         public void Add(IOrderItem item) 
         {
             items.Add(item);
+            Subtotal += item.Price;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+
         }
 
         /// <summary>

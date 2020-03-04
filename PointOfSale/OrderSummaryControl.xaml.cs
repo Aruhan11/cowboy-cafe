@@ -19,22 +19,14 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderSummaryControl : UserControl
     {
-        public string item { get; set; }
+      
         
         public OrderSummaryControl()
         {
             InitializeComponent();
         }
 
-        public void OnRemoveItem(object sender, RoutedEventArgs e)
-        {
-  
-            if (DataContext is Order order)
-            {
-                order.Remove();
-
-            }
-        }
+        
 
     }
 }

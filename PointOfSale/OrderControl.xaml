@@ -24,9 +24,9 @@
                
                 
             </Grid.ColumnDefinitions>
-            <Button Name="ItemSelection" Grid.Column="0" HorizontalAlignment="Center">Item Selection</Button>
-            <Button Name="CancelOrder" Grid.Column="1" HorizontalAlignment="Center">Cancel Order</Button>
-            <Button Name="CompleteOrder" Grid.Column="2" HorizontalAlignment="Center">Complete Order</Button>
+            <Button Name="ItemSelection" Grid.Column="0" HorizontalAlignment="Center" >Item Selection</Button>
+            <Button Name="CancelOrder" Grid.Column="1" HorizontalAlignment="Center" Click="CancelOrderClick">Cancel Order</Button>
+            <Button Name="CompleteOrder" Grid.Column="2" HorizontalAlignment="Center" Click="CompleteOrderClick">Complete Order</Button>
         </Grid>
 
         <local:MenuItemSelectionControl DockPanel.Dock="Left"  >

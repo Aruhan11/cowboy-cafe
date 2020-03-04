@@ -6,47 +6,39 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style TargetType="ListBoxItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="50"/>
-        </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="27"/>
             <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="0">Order</TextBlock>
 
-        <ListView Name="nameList" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Path=Items}">
-            <ListView.ItemTemplate>
+        <TextBlock TextAlignment="Left" HorizontalAlignment="Left" Grid.Row="0" Width="65" FontSize="20">Order</TextBlock>
+        <TextBlock Grid.Row="0" Text="{Binding Path=OrderNumber}" Margin="70,0,190,0" FontSize="20"/>
+
+        <ListBox Name="nameList" Grid.Row="1" ItemsSource="{Binding Path=Items}">
+            <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="25"/>
-                            </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding}"/>
-                        <Button Grid.Column="1" Click="OnRemoveItem">X</Button>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding}"  />
+                        <TextBlock Text="{Binding Path=Price}"  Grid.Column="1" />
                     </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
-        <ListView Name="priceList" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=Items}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <TextBlock Text="{Binding Path=Price}"/>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-        <TextBlock TextAlignment="Left" Grid.Column="0" Grid.Row="2" >Subtotal</TextBlock>
-        <TextBlock TextAlignment="Left" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Subtotal, StringFormat=c}">$</TextBlock>
+        <TextBlock TextAlignment="Left" Grid.Row="2"  >Subtotal</TextBlock>
+        <TextBlock TextAlignment="Right"  Grid.Row="2"  Text="{Binding Path=Subtotal, StringFormat=c}"></TextBlock>
 
     </Grid>
 

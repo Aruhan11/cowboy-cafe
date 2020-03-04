@@ -6,12 +6,13 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <UserControl.Resources>
         <Style TargetType="Button">
             <Setter Property="Height" Value="30px"/>
             <Setter Property="Width" Value="120px"/>
             <Setter Property="FontSize" Value="15"/>
-            
+
         </Style>
     </UserControl.Resources>
 
@@ -21,17 +22,19 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-               
-                
             </Grid.ColumnDefinitions>
             <Button Name="ItemSelection" Grid.Column="0" HorizontalAlignment="Center" >Item Selection</Button>
             <Button Name="CancelOrder" Grid.Column="1" HorizontalAlignment="Center" Click="CancelOrderClick">Cancel Order</Button>
             <Button Name="CompleteOrder" Grid.Column="2" HorizontalAlignment="Center" Click="CompleteOrderClick">Complete Order</Button>
         </Grid>
 
-        <local:MenuItemSelectionControl DockPanel.Dock="Left"  >
-        </local:MenuItemSelectionControl>
+
+        <Border x:Name="Container" Grid.Column="0" Grid.Row="1">
+            <local:MenuItemSelectionControl DockPanel.Dock="Left"  >
+            </local:MenuItemSelectionControl>
+        </Border>
         
+
         <local:OrderSummaryControl>
         </local:OrderSummaryControl>
     </DockPanel>

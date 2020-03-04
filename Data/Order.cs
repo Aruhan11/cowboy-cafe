@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: Order.cs
+ * Purpose: the class representing a order
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;

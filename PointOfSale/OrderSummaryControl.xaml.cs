@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: OrderSummaryControl.xaml.cs
+ * Purpose: show the interface
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -20,7 +25,9 @@ namespace PointOfSale
     public partial class OrderSummaryControl : UserControl
     {
       
-        
+        /// <summary>
+        /// defalut set
+        /// </summary>
         public OrderSummaryControl()
         {
             InitializeComponent();

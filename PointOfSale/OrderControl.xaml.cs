@@ -35,11 +35,21 @@ namespace PointOfSale
             DataContext = new Order();
         }
 
+        /// <summary>
+        /// Click event for cancel order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void CancelOrderClick(object sender, RoutedEventArgs e)
         {
             DataContext = new Order(); 
         }
 
+        /// <summary>
+        /// Click event for cpmplete order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void CompleteOrderClick(object sender, RoutedEventArgs e)
         {
             DataContext = new Order();

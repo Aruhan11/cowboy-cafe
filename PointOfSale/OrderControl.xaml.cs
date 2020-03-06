@@ -35,6 +35,13 @@ namespace PointOfSale
             DataContext = new Order();
         }
 
+      
+        public void ItemSelectionClick(object sender, RoutedEventArgs e)
+        {
+            Container.Child = new MenuItemSelectionControl();
+        }
+        
+        
         /// <summary>
         /// Click event for cancel order
         /// </summary>

@@ -66,7 +66,25 @@ namespace PointOfSale
         //
         //  }
 
+        public void AddItemAndOenCustomizationScreen(IOrderItem item, FrameworkElement screen)
+        {
+            var order = DataContext as Order;
+            if (order == null) throw new Exception("DataContext expeted to be an Order instance");
 
+            if (screen != null)
+            {
+                var orderControl = this.FindAncestor<OrderControl>();
+                if (orderControl == null) throw new Exception("An ancestor 0f OrderControl expection");
+
+                screen.DataContext = item;
+                orderControl.SwapScreen(screen);
+                   
+            
+            }
+
+            order.Add(item);
+        
+        }
 
 
 
@@ -82,8 +100,7 @@ namespace PointOfSale
             {
                 var entree = new CowpokeChili();
                 var screen = new CustomizeCowpokeChili();
-                data.Add(entree);
-                orderControl.SwapScreen(screen);
+                AddItemAndOenCustomizationScreen(entree, screen);
             }
         }
 

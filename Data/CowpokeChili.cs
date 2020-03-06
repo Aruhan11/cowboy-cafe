@@ -5,14 +5,18 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Cowpoke Chili entree
     /// </summary>
-    public class CowpokeChili: Entree
+    public class CowpokeChili: Entree, INotifyPropertyChanged
     {
+
+       
+          
         private bool cheese = true;
         /// <summary>
         /// If the chili is topped with cheese
@@ -20,7 +24,11 @@ namespace CowboyCafe.Data
         public bool Cheese
         {
             get { return cheese; }
-            set { cheese = value; }
+            set { 
+                cheese = value;
+                NotifyOfPropertyChange("Cheese");
+               
+            }
         }
 
         private bool sourCream = true;
@@ -30,7 +38,10 @@ namespace CowboyCafe.Data
         public bool SourCream
         {
             get { return sourCream; }
-            set { sourCream = value; }
+            set { sourCream = value;
+                NotifyOfPropertyChange("SourCream");
+
+            }
         }
 
         private bool greenOnions = true;
@@ -40,7 +51,9 @@ namespace CowboyCafe.Data
         public bool GreenOnions
         {
             get { return greenOnions; }
-            set { greenOnions = value; }
+            set { greenOnions = value;
+                NotifyOfPropertyChange("GreenOnions");
+            }
         }
 
         private bool tortillaStrips = true;
@@ -50,7 +63,9 @@ namespace CowboyCafe.Data
         public bool TortillaStrips
         {
             get { return tortillaStrips; }
-            set { tortillaStrips = value; }
+            set { tortillaStrips = value;
+                NotifyOfPropertyChange("TortillaStrips");
+            }
         }
 
         /// <summary>
@@ -101,6 +116,9 @@ namespace CowboyCafe.Data
         {
             return "Cowpoke Chili";
         }
+
+        
+
     }
 }
 

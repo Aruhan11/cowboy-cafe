@@ -1,9 +1,4 @@
-﻿/*
- * Author: Aruhan
- * Class: CustomizeRustlersRibs.xaml.cs
- * Purpose: let users customize Angry Chiken
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,11 +14,11 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomizeRustlersRibs.xaml
+    /// Interaction logic for CustomizePandeCampo.xaml
     /// </summary>
-    public partial class CustomizeRustlersRibs : UserControl
+    public partial class CustomizePandeCampo : UserControl
     {
-        public CustomizeRustlersRibs()
+        public CustomizePandeCampo()
         {
             InitializeComponent();
         }

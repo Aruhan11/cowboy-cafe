@@ -47,7 +47,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Get the calories of the side
         /// </summary>
-        public List<string> SpecialInstructions => throw new NotImplementedException();
+        public List<string> SpecialInstructions { get; }
 
     }
 }

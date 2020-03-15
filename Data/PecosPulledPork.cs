@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Pecos Pulled Pork entree
     /// </summary>
-    public class PecosPulledPork: Entree
+    public class PecosPulledPork: Entree, INotifyPropertyChanged
     {
         /// <summary>
         /// The price of the pecos pulled pork
@@ -41,7 +42,9 @@ namespace CowboyCafe.Data
         public bool Bread
         {
             get { return bread; }
-            set { bread = value; }
+            set { bread = value;
+                NotifyOfPropertyChange("Bread");
+            }
         }
 
         /// <summary>
@@ -55,7 +58,9 @@ namespace CowboyCafe.Data
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set { pickle = value;
+                NotifyOfPropertyChange("Pickle"); 
+            }
         }
 
         /// <summary>

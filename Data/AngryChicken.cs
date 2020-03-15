@@ -7,13 +7,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Angry Chicken entree
     /// </summary>
-    public class AngryChicken: Entree
+    public class AngryChicken: Entree, INotifyPropertyChanged
     {
         /// <summary>
         /// The price of the angry chicken
@@ -39,13 +40,23 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool Pickle {
             get { return pickle; }
-            set { pickle = value; }
+            set { pickle = value;
+                NotifyOfPropertyChange("Pickle");
+            }
         }
 
+
+        private bool bread = true;
         /// <summary>
         /// If the angry chicken should be served with bread
         /// </summary>
-        public bool Bread { get; set; } = true;
+        public bool Bread {
+            get { return bread; }
+            set {
+                bread = value;
+                NotifyOfPropertyChange("Bread");
+            }
+        }
 
         /// <summary>
         /// Special instructions for the preparation of the chicken

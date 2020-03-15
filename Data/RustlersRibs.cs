@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Rustler's Ribs entree
     /// </summary>
-    public class RustlersRibs : Entree
+    public class RustlersRibs : Entree, INotifyPropertyChanged
     {
         /// <summary>
         /// The price of the rustler's ribs

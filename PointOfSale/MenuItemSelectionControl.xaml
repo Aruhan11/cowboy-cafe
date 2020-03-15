@@ -23,13 +23,13 @@
 
         <StackPanel  Grid.Column="0">
             <TextBlock TextAlignment="Center" FontSize="20">Entrees</TextBlock>
-            <Button  Name="AddCowpokeChiliButton" Tag="CowpokeChili">Cowpoke Chili</Button>
+            <Button Name="AddCowpokeChiliButton" Tag="CowpokeChili">Cowpoke Chili</Button>
             <Button Name="AddRustlersRibsButton">Rustler's Ribs</Button>
             <Button Name="AddPecosPulledPorkButton">Pecos Pulled Pork</Button>
             <Button Name="AddTrailBurgerButton">Trail Burger</Button>
             <Button Name="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
             <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
-            <Button Name="AddAngryChickenButton">Angry Chicken</Button>
+            <Button Name="AddAngryChickenButton" Tag="AngryChicken">Angry Chicken</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="1">

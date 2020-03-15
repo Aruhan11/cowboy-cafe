@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Trail Burger entree
     /// </summary>
-    public class TrailBurger: Entree
+    public class TrailBurger: Entree, INotifyPropertyChanged
     {
         /// <summary>
         /// The price of the trail burger
@@ -41,7 +42,9 @@ namespace CowboyCafe.Data
         public bool Bun
         {
             get { return bun; }
-            set { bun = value; }
+            set { bun = value;
+                NotifyOfPropertyChange("Bun");
+            }
         }
 
         /// <summary>
@@ -55,7 +58,9 @@ namespace CowboyCafe.Data
         public bool Ketchup
         {
             get { return ketchup; }
-            set { ketchup = value; }
+            set { ketchup = value;
+                NotifyOfPropertyChange("Ketchup");
+            }
         }
 
         /// <summary>
@@ -69,7 +74,9 @@ namespace CowboyCafe.Data
         public bool Mustard
         {
             get { return mustard; }
-            set { mustard = value; }
+            set { mustard = value;
+                NotifyOfPropertyChange("Mustard");
+            }
         }
 
         /// <summary>
@@ -83,7 +90,9 @@ namespace CowboyCafe.Data
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set { pickle = value;
+                NotifyOfPropertyChange("Pickle");
+            }
         }
 
         /// <summary>
@@ -97,7 +106,9 @@ namespace CowboyCafe.Data
         public bool Cheese
         {
             get { return cheese; }
-            set { cheese = value; }
+            set { cheese = value;
+                NotifyOfPropertyChange("Cheese");
+            }
         }
 
         /// <summary>

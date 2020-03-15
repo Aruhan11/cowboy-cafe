@@ -14,9 +14,7 @@ namespace CowboyCafe.Data
     /// </summary>
     public class CowpokeChili: Entree, INotifyPropertyChanged
     {
-
-       
-          
+        
         private bool cheese = true;
         /// <summary>
         /// If the chili is topped with cheese
@@ -26,8 +24,7 @@ namespace CowboyCafe.Data
             get { return cheese; }
             set { 
                 cheese = value;
-                NotifyOfPropertyChange("Cheese");
-               
+                NotifyOfPropertyChange("Cheese");              
             }
         }
 

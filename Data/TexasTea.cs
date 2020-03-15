@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Texas Tea drink
     /// </summary>
-    public class TexasTea: Drink
+    public class TexasTea: Drink, INotifyPropertyChanged
     {
         /// <summary>
         /// if sever sweet or not

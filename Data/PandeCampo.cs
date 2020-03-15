@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Pan de Campo side
     /// </summary>
-    public class PanDeCampo : Side
+    public class PanDeCampo : Side, INotifyPropertyChanged
     {
         /// <summary>
         /// The calories of Pan de Campo for different sizes

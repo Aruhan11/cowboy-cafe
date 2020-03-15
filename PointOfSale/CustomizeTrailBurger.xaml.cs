@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Aruhan
- * Class: CustomizeRustlersRibs.xaml.cs
+ * Class: CustomizeTrailBurger.xaml.cs
  * Purpose: let users customize Angry Chiken
  */
 using System;
@@ -19,11 +19,11 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomizeRustlersRibs.xaml
+    /// Interaction logic for CustomizeTrailBurger.xaml
     /// </summary>
-    public partial class CustomizeRustlersRibs : UserControl
+    public partial class CustomizeTrailBurger : UserControl
     {
-        public CustomizeRustlersRibs()
+        public CustomizeTrailBurger()
         {
             InitializeComponent();
         }

@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Baked Beans side
     /// </summary>
-    public class BakedBeans: Side
+    public class BakedBeans: Side, INotifyPropertyChanged
     {
         /// <summary>
         /// The calories of Baked Beans for different sizes

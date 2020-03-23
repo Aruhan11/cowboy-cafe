@@ -30,21 +30,50 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract uint Calories { get; }
 
+
+        private Size size;
+
         /// <summary>
         /// the size of drink
         /// </summary>
-        public virtual Size Size { get; set; } = Size.Small;
+        public virtual Size Size 
+        {
+            get { return size; }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            }
+        }
+
+        private bool ice = true;
 
         /// <summary>
         /// if serve ice for drink
         /// </summary>
-        public virtual bool Ice { get; set; } = true;
+        public bool Ice 
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+            }
+        } 
 
 
         /// <summary>
         /// the special instructions of 
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        protected void NotifyOfPropertyChange(string propertyName)
+        {
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+        }
 
     }
 }

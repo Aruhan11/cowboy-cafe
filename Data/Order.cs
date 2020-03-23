@@ -30,10 +30,26 @@ namespace CowboyCafe.Data
         /// </summary>
         public IEnumerable<IOrderItem> Items { get { return items.ToArray(); } }
 
+
+        private double subtotal;
         /// <summary>
         /// the subtotal of the order
         /// </summary>
-        public double Subtotal { get; private set; }
+        public double Subtotal { 
+            get 
+            { 
+                subtotal = 0;
+                foreach (IOrderItem item in Items)
+                {
+                    subtotal += item.Price;
+                }
+                
+                return subtotal;
+            }
+
+            private set { subtotal = value; } 
+        
+        }
         
         /// <summary>
         /// the current order number
@@ -56,10 +72,9 @@ namespace CowboyCafe.Data
                 notifier.PropertyChanged += OnItemPropertyChanged;
             }
             
-            items.Add(item);
-            Subtotal += item.Price;
+            items.Add(item);           
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
                        
         }
 
@@ -74,8 +89,7 @@ namespace CowboyCafe.Data
                 notifier.PropertyChanged -= OnItemPropertyChanged;
             }
            
-            items.Remove(item);
-            Subtotal -= item.Price;
+            items.Remove(item);            
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subotal"));
 

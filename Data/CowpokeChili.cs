@@ -73,6 +73,7 @@ namespace CowboyCafe.Data
             get
             {
                 return 6.10;
+                NotifyOfPropertyChange("Price");
             }
         }
 

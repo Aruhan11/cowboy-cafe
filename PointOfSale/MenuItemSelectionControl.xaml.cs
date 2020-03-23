@@ -81,10 +81,11 @@ namespace PointOfSale
                 if (orderControl == null) throw new Exception("An ancestor 0f OrderControl exception");
 
                 screen.DataContext = item;
-                orderControl.SwapScreen(screen);
-                  
+                
+                orderControl.SwapScreen(screen);                  
             }
-            order.Add(item);       
+            order.Add(item);
+
         }
 
 
@@ -275,7 +276,9 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
-                data.Add(new JerkedSoda());
+                var entree = new JerkedSoda();
+                var screen = new CustomizeJerkedSoda();
+                AddItemAndOnCustomizationScreen(entree, screen);
             }
         }
 
@@ -289,7 +292,9 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
-                data.Add(new TexasTea());
+                var entree = new TexasTea();
+                var screen = new CustomizeTexasTea();
+                AddItemAndOnCustomizationScreen(entree, screen);
             }
         }
 
@@ -303,7 +308,9 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
-                data.Add(new CowboyCoffee());
+                var entree = new CowboyCoffee();
+                var screen = new CustomizeCowboyCoffee();
+                AddItemAndOnCustomizationScreen(entree, screen);
             }
         }
 
@@ -317,7 +324,9 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
-                data.Add(new Water());
+                var entree = new Water();
+                var screen = new CustomizeWater();
+                AddItemAndOnCustomizationScreen(entree, screen);
             }
         }
     }

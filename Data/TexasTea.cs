@@ -15,15 +15,35 @@ namespace CowboyCafe.Data
     /// </summary>
     public class TexasTea: Drink, INotifyPropertyChanged
     {
+        private bool sweet = true;
+
         /// <summary>
         /// if sever sweet or not
         /// </summary>
-        public bool Sweet { get; set; } = true;
+        public bool Sweet
+        {
+            get { return sweet; }
+            set
+            {
+                sweet = value;
+                NotifyOfPropertyChange("Sweet");
+            }
+        }
+
+        private bool lemon = false;
 
         /// <summary>
         /// if serve lemon or not
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon 
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                NotifyOfPropertyChange("Lemon");
+            }
+        }
 
         /// <summary>
         /// the price of Texas tea by different sizes
@@ -119,8 +139,7 @@ namespace CowboyCafe.Data
                 return Size.ToString() + " Texas Sweet Tea";
             }
             else
-            {
-                
+            {                
                 return Size.ToString() + " Texas Plain Tea";
             }
            

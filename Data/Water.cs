@@ -15,10 +15,20 @@ namespace CowboyCafe.Data
     /// </summary>
     public class Water: Drink, INotifyPropertyChanged
     {
+        private bool lemon = false;
+        
         /// <summary>
         /// if serve lemon or not
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                NotifyOfPropertyChange("Lemon");
+            }
+        }
 
         /// <summary>
         /// the price of water by different sizes
@@ -78,6 +88,7 @@ namespace CowboyCafe.Data
                 {
                     instructions.Add("Add Lemon");
                 }
+                
 
                 return instructions;
 

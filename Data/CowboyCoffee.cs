@@ -15,20 +15,56 @@ namespace CowboyCafe.Data
     /// </summary>
     public class CowboyCoffee: Drink, INotifyPropertyChanged
     {
+             
+        private bool roomForCream = false;
+        
         /// <summary>
         /// If the cowboy coffee shoud be served with room for cream
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream 
+        {
+            get
+            {   return roomForCream;    }
+            set
+            {
+                roomForCream = value;
+                NotifyOfPropertyChange("RoomForCream");
+            }
+        }
+
+
+        private bool ice = false;
 
         /// <summary>
         /// If the cowboy coffee shoud be served with ice
         /// </summary>
-        public override bool Ice { get; set; } = false;
+        public bool Ice 
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {   
+                ice = value;
+                NotifyOfPropertyChange("Ice");
+            }
+        }
 
+        private  bool decaf = false;
+        
         /// <summary>
         /// If the cowboy coffee shoud be served with decaf
         /// </summary>
-        public bool Decaf { get; set; } = false;
+        public  bool Decaf 
+        {
+            get { return decaf; }
+            set 
+            {
+                decaf = value;
+                NotifyOfPropertyChange("Decaf");
+            }
+        } 
 
         /// <summary>
         /// The price of Cowboy Coffee for different sizes
@@ -88,6 +124,7 @@ namespace CowboyCafe.Data
                 {
                     instructions.Add("Room for Cream");
                 }
+                
 
                 return instructions;
 

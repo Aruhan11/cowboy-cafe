@@ -15,10 +15,23 @@ namespace CowboyCafe.Data
     /// </summary>
     public class JerkedSoda: Drink, INotifyPropertyChanged
     {
+        private SodaFlavor flavor;
+        
         /// <summary>
         /// the flavor
         /// </summary>
-        public SodaFlavor Flavor { get; set; }
+        public SodaFlavor Flavor 
+        {
+            get 
+            {
+                return flavor;
+            }
+            set
+            {
+                flavor = value;
+                NotifyOfPropertyChange("Flavor");
+            }
+        }
 
         /// <summary>
         /// the price of jerked soda by different size
@@ -91,8 +104,7 @@ namespace CowboyCafe.Data
                 case SodaFlavor.BirchBeer:
                     return Size.ToString() + " Birch Beer Jerked Soda";
                 case SodaFlavor.CreamSoda:
-                    return Size.ToString() + " Cream Soda Jerked Soda";
-                
+                    return Size.ToString() + " Cream Soda Jerked Soda";               
                 case SodaFlavor.OrangeSoda:
                     return Size.ToString() + " Orange Soda Jerked Soda";
                 case SodaFlavor.RootBeer:

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CustomizeWater.xaml.cs
+ * Purpose: let users customize Water
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

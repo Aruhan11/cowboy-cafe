@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CustomizeCornDodgers.xaml.cs
+ * Purpose: let users customize Corn Dodgers
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

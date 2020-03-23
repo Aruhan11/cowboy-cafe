@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CustomizeBakedBeans.xaml.cs
+ * Purpose: let users customize Baked Beans
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

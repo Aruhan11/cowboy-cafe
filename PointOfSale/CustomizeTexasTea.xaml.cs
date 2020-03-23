@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CustomizeTexasTea.xaml.cs
+ * Purpose: let users customize Texas Tea
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

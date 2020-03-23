@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CustomizeCowboyCoffee.xaml.cs
+ * Purpose: let users customize Cowboy Coffee
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

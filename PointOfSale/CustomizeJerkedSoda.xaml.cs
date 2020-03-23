@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CustomizeJerkedSoda.xaml.cs
+ * Purpose: let users customize Jerked Soda
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

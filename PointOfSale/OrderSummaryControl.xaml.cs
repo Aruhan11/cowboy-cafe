@@ -49,8 +49,7 @@ namespace PointOfSale
             {
                 if (element.DataContext is IOrderItem item)
                 {
-                    order.Remove(item);
-                    
+                    order.Remove(item);                   
                 }                                    
             } 
         }

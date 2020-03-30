@@ -36,6 +36,11 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Romove items in order list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnRemoveItem(object sender, RoutedEventArgs e)
         {
            if(DataContext is Order order)
@@ -50,6 +55,11 @@ namespace PointOfSale
             } 
         }
 
+        /// <summary>
+        /// Change selection for items
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChangeSlection(Object sender, RoutedEventArgs e)
         {
             if (sender is ListBox list)

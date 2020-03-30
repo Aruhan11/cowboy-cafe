@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <TextBlock FontSize="30" Text="Customize Dakota Double Burger"/>
+        <TextBlock FontSize="30" Text="Customize Texas Triple Burger"/>
         <StackPanel Orientation="Horizontal">
             <CheckBox IsChecked="{Binding Path=Bun}">Bun</CheckBox>
             <CheckBox IsChecked="{Binding Path=Ketchup}">Ketchup</CheckBox>

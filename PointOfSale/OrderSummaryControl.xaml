@@ -22,12 +22,13 @@
         <TextBlock TextAlignment="Left" HorizontalAlignment="Left" Grid.Row="0" Width="65" FontSize="20">Order</TextBlock>
         <TextBlock Grid.Row="0" Text="{Binding Path=OrderNumber}" Margin="70,0,190,0" FontSize="20"/>
 
-        <ListBox Name="nameList" Grid.Row="1" ItemsSource="{Binding Path=Items}">
+        <ListBox Name="nameList" SelectionChanged="ChangeSlection" Grid.Row="1" ItemsSource="{Binding Path=Items}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
+                            <ColumnDefinition Width="25"/>
                             <ColumnDefinition Width="25"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
@@ -36,6 +37,7 @@
                         </Grid.RowDefinitions>
                         <TextBlock Text="{Binding}"  />
                         <TextBlock Text="{Binding Path=Price}"  Grid.Column="1" />
+                        <Button  Click="OnRemoveItem" Grid.Column="2" Width="25" Height="25" Content="X"></Button>
                         <ListView ItemsSource="{Binding Path=SpecialInstructions}" Grid.Row="1"/>
                     </Grid>
                 </DataTemplate>

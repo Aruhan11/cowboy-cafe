@@ -156,6 +156,20 @@ namespace PointOfSale
                         order = this.FindAncestor<OrderControl>();
                         order.SwapScreen(screen);
                     }
+                    if (OrderItem is TrailBurger trailBurger)
+                    {
+                        var screen = new CustomizeTexasTripleBurger();
+                        screen.DataContext = trailBurger;
+                        order = this.FindAncestor<OrderControl>();
+                        order.SwapScreen(screen);
+                    }
+                    if (OrderItem is Water water)
+                    {
+                        var screen = new CustomizeTexasTripleBurger();
+                        screen.DataContext = water;
+                        order = this.FindAncestor<OrderControl>();
+                        order.SwapScreen(screen);
+                    }
 
                 }
             }

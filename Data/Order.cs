@@ -44,13 +44,28 @@ namespace CowboyCafe.Data
                     subtotal += item.Price;
                 }
                 
+                
                 return subtotal;
             }
 
             private set { subtotal = value; } 
         
         }
-        
+
+
+        private double total;
+
+        public double Total
+        {
+            get
+            {
+                return subtotal * 1.16;
+            }
+
+           
+        }
+
+
         /// <summary>
         /// the current order number
         /// </summary>
@@ -91,7 +106,8 @@ namespace CowboyCafe.Data
            
             items.Remove(item);            
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal" +
+                ""));
 
         }
 

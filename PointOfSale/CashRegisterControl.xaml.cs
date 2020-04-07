@@ -1,14 +1,6 @@
-﻿/*
- * Author: Aruhan
- * Class: MainWindow.xaml.cs
- * Purpose: show the interface
- */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -22,21 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CashRegisterControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CashRegisterControl : UserControl
     {
-        /// <summary>
-        /// defalut set
-        /// </summary>
-        public MainWindow()
+        public CashRegisterControl()
         {
             InitializeComponent();
-        }
-
-        public void SwapScreen(UIElement element)
-        {
-            Container.Child = element;
         }
     }
 }

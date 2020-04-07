@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="900">
     <Grid>
-        <local:OrderControl></local:OrderControl>
-        
+        <Border x:Name="Container" Grid.Column="0" Grid.Row="1">
+            <local:OrderControl></local:OrderControl>
+        </Border>
 
     </Grid>
 </Window>

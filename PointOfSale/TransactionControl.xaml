@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.OrderSummaryControl"
+﻿<UserControl x:Class="PointOfSale.TransactionControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -15,14 +15,15 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="27"/>
             <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-
 
         <TextBlock TextAlignment="Left" HorizontalAlignment="Left" Grid.Row="0" Width="65" FontSize="20">Order</TextBlock>
         <TextBlock Grid.Row="0" Text="{Binding Path=OrderNumber}" Margin="70,0,190,0" FontSize="20"/>
 
-        <ListBox Name="nameList" SelectionChanged="ChangeSlection" Grid.Row="1" ItemsSource="{Binding Path=Items}">
+        <ListBox Name="nameList" Grid.Row="1" ItemsSource="{Binding Path=Items}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -37,7 +38,6 @@
                         </Grid.RowDefinitions>
                         <TextBlock Text="{Binding}"  />
                         <TextBlock Text="{Binding Path=Price}"  Grid.Column="1" />
-                        <Button  Click="OnRemoveItem" Grid.Column="2" Width="25" Height="25" Content="X"></Button>
                         <ListView ItemsSource="{Binding Path=SpecialInstructions}" Grid.Row="1"/>
                     </Grid>
                 </DataTemplate>
@@ -46,8 +46,12 @@
 
         <TextBlock TextAlignment="Left" Grid.Row="2"  >Subtotal</TextBlock>
         <TextBlock TextAlignment="Right"  Grid.Row="2"  Text="{Binding Path=Subtotal, StringFormat=c}"></TextBlock>
-        
 
+        <TextBlock TextAlignment="Left" Grid.Row="3"  >Total</TextBlock>
+        <TextBlock TextAlignment="Right"  Grid.Row="3"  Text="{Binding Path=Total, StringFormat=c}"></TextBlock>
+
+        <Button Name="PaymentByCredit" Grid.Row="4" HorizontalAlignment="Left" Click="OnPaymentByCredit"  >Pay By Credit</Button>
+        <Button Name="PaymentByCash" Grid.Row="4" HorizontalAlignment="Center" Click="OnPaymentByCredit">Pay By Cash</Button>
+        <Button Name="CancelTransaction" Grid.Row="4" HorizontalAlignment="Right" Click="OnPaymentByCredit"  >Cancel Transaction</Button>
     </Grid>
-
 </UserControl>

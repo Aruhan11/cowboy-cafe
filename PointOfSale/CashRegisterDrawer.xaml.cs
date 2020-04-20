@@ -26,6 +26,11 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        /// <summary>
+        /// event handler to process when complete payment by cash
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void CompletePaymentByCash(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();

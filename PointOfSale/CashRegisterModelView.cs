@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CashRegisterModelView.cs
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using CashRegister;
@@ -24,6 +28,9 @@ namespace PointOfSale
         /// </summary>
         public double TotalValue => drawer.TotalValue;
 
+        /// <summary>
+        /// property of penny
+        /// </summary>
         public int Pennies
         {
             get => drawer.Pennies;
@@ -39,6 +46,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of nickel
+        /// </summary>
         public int Nickels
         {
             get => drawer.Nickels;
@@ -52,7 +62,9 @@ namespace PointOfSale
             }
         }
 
-
+        /// <summary>
+        /// property of dime
+        /// </summary>
         public int Dimes
         {
             get => drawer.Dimes;
@@ -66,6 +78,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of quarter
+        /// </summary>
         public int Quarters
         {
             get => drawer.Quarters;
@@ -79,6 +94,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of half dollar
+        /// </summary>
         public int HalfDollars
         {
             get => drawer.Quarters;
@@ -92,6 +110,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of dollar
+        /// </summary>
         public int Dollars
         {
             get => drawer.Quarters;
@@ -105,6 +126,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of one
+        /// </summary>
         public int Ones
         {
             get => drawer.Ones;
@@ -118,6 +142,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of two
+        /// </summary>
         public int Twos
         {
             get => drawer.Twos;
@@ -131,6 +158,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of five
+        /// </summary>
         public int Fives
         {
             get => drawer.Fives;
@@ -144,6 +174,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of ten
+        /// </summary>
         public int Tens
         {
             get => drawer.Tens;
@@ -157,6 +190,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of twenty
+        /// </summary>
         public int Twenties
         {
             get => drawer.Twenties;
@@ -170,6 +206,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of fifty
+        /// </summary>
         public int Fifties
         {
             get => drawer.Fifties;
@@ -183,6 +222,9 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// property of hundred
+        /// </summary>
         public int Hundreds
         {
             get => drawer.Hundreds;
@@ -202,7 +244,7 @@ namespace PointOfSale
         /// Helper method for triggering PropertyChanged events
         /// </summary>
         /// <param name="denomination">The denomination prroperty that is changing</param>
-        void InokePropertyChanged(string denomination)
+        private void InokePropertyChanged(string denomination)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(denomination));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalValue"));

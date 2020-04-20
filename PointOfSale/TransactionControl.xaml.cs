@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: TransactionControl.xaml.cs
+ * Propose: to process transaction
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -30,12 +36,16 @@ namespace PointOfSale
             CancelTransaction.Click += OnCancelTransaction;
         }
 
-        
-
+       /// <summary>
+       /// which payment
+       /// </summary>
         private string payment; 
 
-
-        public string PrintHelper()
+        /// <summary>
+        /// helper method to print reciept
+        /// </summary>
+        /// <returns></returns>
+        private string PrintHelper()
         {
             string recipt = "";
 
@@ -77,6 +87,11 @@ namespace PointOfSale
         
         }
 
+        /// <summary>
+        /// event handler to process payment is credit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnPaymentByCredit(object sender, RoutedEventArgs e)
         {
             payment = "Pay by Credit";
@@ -118,7 +133,11 @@ namespace PointOfSale
             }
         }
 
-
+        /// <summary>
+        /// event handler to process when payment is cash
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnPaymentByCash(object sender, RoutedEventArgs e)
         {
             payment = "Pay by Cash";
@@ -132,7 +151,11 @@ namespace PointOfSale
 
         }
 
-
+        /// <summary>
+        /// event handler to process when cancel transaction
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnCancelTransaction(object sender, RoutedEventArgs e)
         {
            

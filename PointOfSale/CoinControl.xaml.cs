@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: CoinControl.xaml.cs
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

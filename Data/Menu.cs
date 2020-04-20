@@ -1,11 +1,24 @@
-﻿using System;
+﻿/*
+ * Author: Aruhan
+ * Class: Menu.cs
+ * Propose: represent menus
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// a class representing a menu
+    /// </summary>
     public static class Menu
     {
+        /// <summary>
+        /// menu of entree
+        /// </summary>
+        /// <returns>the list of entree</returns>
         public static IEnumerable<IOrderItem> Entrees()
         {
             List<IOrderItem> entrees = new List<IOrderItem>();
@@ -20,6 +33,10 @@ namespace CowboyCafe.Data
             return entrees;
         }
 
+        /// <summary>
+        /// menu of sides
+        /// </summary>
+        /// <returns>a list of sides</returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> sides = new List<IOrderItem>();
@@ -31,6 +48,10 @@ namespace CowboyCafe.Data
             return sides;
         }
 
+        /// <summary>
+        /// menu of drinks
+        /// </summary>
+        /// <returns>a list of drinks</returns>
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> drinks = new List<IOrderItem>();
@@ -42,6 +63,10 @@ namespace CowboyCafe.Data
             return drinks;
         }
 
+        /// <summary>
+        /// menu of all
+        /// </summary>
+        /// <returns> a list of menu all</returns>
         public static IEnumerable<IOrderItem> CompleteMenu()
         {
             List<IOrderItem> allMenu = new List<IOrderItem>();

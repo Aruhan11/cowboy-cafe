@@ -13,8 +13,14 @@ namespace CowboyCafe.Data
     /// <summary>
     /// The class representing a order
     /// </summary>
-    public class Order: INotifyPropertyChanged
+    public class Order : INotifyPropertyChanged
     {
+
+        public Order()
+        {
+            lastOrderNumber++;
+        }
+        
         /// <summary>
         /// the last order number
         /// </summary>
@@ -24,12 +30,11 @@ namespace CowboyCafe.Data
         /// the list of items in the order
         /// </summary>
         private List<IOrderItem> items = new List<IOrderItem>();
-        
+
         /// <summary>
         /// the Inumerable items in the order
         /// </summary>
         public IEnumerable<IOrderItem> Items { get { return items.ToArray(); } }
-
 
         private double subtotal;
         /// <summary>
@@ -69,7 +74,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// the current order number
         /// </summary>
-        public uint OrderNumber { get { return lastOrderNumber++;  } }
+        public uint OrderNumber { get { return lastOrderNumber;  } }
 
         /// <summary>
         /// the property changed event handler

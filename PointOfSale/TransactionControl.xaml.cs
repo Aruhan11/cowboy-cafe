@@ -30,7 +30,7 @@ namespace PointOfSale
             CancelTransaction.Click += OnCancelTransaction;
         }
 
-        private OrderControl order;
+        
 
         private string payment; 
 
@@ -51,11 +51,17 @@ namespace PointOfSale
                 {
                     specialInstructions = "";
                     
-                    foreach (string instrucntions in item.SpecialInstructions)
+                    if(item.SpecialInstructions != null)
                     {
-                        specialInstructions += instrucntions;
-                        specialInstructions += " ";
+                        foreach (string instructions in item.SpecialInstructions)
+                        {
+                            specialInstructions += instructions;
+                            specialInstructions += " ";
+                        }
+
                     }
+                    
+                    
                     items += item.ToString() + "\n" +  item.Price.ToString() + "\n" + specialInstructions + "\n";
                 }
 
@@ -87,27 +93,26 @@ namespace PointOfSale
                 {
                     cashRegisterReceiptPrinter.Print(PrintHelper());
                     var mainWindow = this.FindAncestor<MainWindow>();
-                    var screen = new OrderControl();
-                    screen.DataContext = new Order();
+                    var screen = new OrderControl();                   
                     mainWindow.SwapScreen(screen);
 
                 }
                 if (result == ResultCode.InsufficentFunds)
                 {
-                    MessageBox.Show("There is/are error(s)");
+                    MessageBox.Show("There is InsufficentFunds error.");
                 }
                 
                 if (result == ResultCode.CancelledCard)
                 {
-                    MessageBox.Show("There is/are error(s)");
+                    MessageBox.Show("There is Cancelled Card error.");
                 }
                 if (result == ResultCode.ReadError)
                 {
-                    MessageBox.Show("There is/are error(s)");
+                    MessageBox.Show("There is Read error");
                 }
                 if (result == ResultCode.UnknownErrror)
                 {
-                    MessageBox.Show("There is/are error(s)");
+                    MessageBox.Show("There is UnknownError");
                 }
 
             }
@@ -118,9 +123,8 @@ namespace PointOfSale
         {
             payment = "Pay by Cash";
             var cashDrawer = new CashRegister.CashDrawer();
-
             var mainWindow = this.FindAncestor<MainWindow>();
-            var screen = new CashRegisterControl();            
+            var screen = new CashRegisterDrawer();            
             mainWindow.SwapScreen(screen);
 
 

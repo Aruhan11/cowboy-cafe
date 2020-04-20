@@ -68,6 +68,7 @@ namespace PointOfSale
             screen.DataContext = order;
             
             mainWindow.SwapScreen(screen);
+
              
         }
 
@@ -76,5 +77,6 @@ namespace PointOfSale
             Container.Child = element;
         }
 
+      
     }
 }

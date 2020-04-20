@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CashRegister;
+using Extensions;
 
 
 namespace PointOfSale
@@ -23,6 +24,13 @@ namespace PointOfSale
         public CashRegisterDrawer()
         {
             InitializeComponent();
+        }
+
+        public void CompletePaymentByCash(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = this.FindAncestor<MainWindow>();
+            var screen = new OrderControl();
+            mainWindow.SwapScreen(screen);
         }
     }
 }

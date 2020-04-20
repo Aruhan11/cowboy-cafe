@@ -18,25 +18,26 @@
 
     <DockPanel>
         <Grid DockPanel.Dock="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Name="ItemSelection" Grid.Column="0" HorizontalAlignment="Center" Click="ItemSelectionClick" >Item Selection</Button>
-            <Button Name="CancelOrder" Grid.Column="1" HorizontalAlignment="Center" Click="CancelOrderClick">Cancel Order</Button>
-            <Button Name="CompleteOrder" Grid.Column="2" HorizontalAlignment="Center" Click="CompleteOrderClick">Complete Order</Button>
-        </Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Name="ItemSelection" Grid.Column="0" HorizontalAlignment="Center" Click="ItemSelectionClick" >Item Selection</Button>
+                <Button Name="CancelOrder" Grid.Column="1" HorizontalAlignment="Center" Click="CancelOrderClick">Cancel Order</Button>
+                <Button Name="CompleteOrder" Grid.Column="2" HorizontalAlignment="Center" Click="CompleteOrderClick">Complete Order</Button>
+            </Grid>
 
 
-        <Border x:Name="Container" Grid.Column="0" Grid.Row="1">
-            <local:MenuItemSelectionControl DockPanel.Dock="Left"  >
-            </local:MenuItemSelectionControl>
-        </Border>
-        
+            <Border x:Name="Container" Grid.Column="0" Grid.Row="1">
+                <local:MenuItemSelectionControl DockPanel.Dock="Left"  >
+                </local:MenuItemSelectionControl>
+            </Border>
 
-        <local:OrderSummaryControl>
-        </local:OrderSummaryControl>
+
+            <local:OrderSummaryControl>
+            </local:OrderSummaryControl>
+
     </DockPanel>
 
 

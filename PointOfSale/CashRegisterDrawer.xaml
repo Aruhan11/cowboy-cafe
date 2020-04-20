@@ -8,12 +8,22 @@
              d:DesignHeight="450" d:DesignWidth="900">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="155"/>
+            <RowDefinition Height="155"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="840">
+            <local:BillControl Denomination="One" Quantity="{Binding Path=Ones}"/>
+            <local:BillControl Denomination="Two" Quantity="{Binding Path=Twos}"/>
+            <local:BillControl Denomination="Five" Quantity="{Binding Path=Fives}"/>
+            <local:BillControl Denomination="Ten" Quantity="{Binding Path=Tens}"/>
+            <local:BillControl Denomination="Twenty" Quantity="{Binding Path=Twenties}"/>
+            <local:BillControl Denomination="Fifty" Quantity="{Binding Path=Fifties}"/>
+            <local:BillControl Denomination="Hundred" Quantity="{Binding Path=Hundreds}"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Height="150" Width="720">
             <local:CoinControl Denomination="Penny" Quantity="{Binding Path=Pennies}"/>
             <local:CoinControl Denomination="Dime" Quantity="{Binding Path=Dimes}"/>
             <local:CoinControl Denomination="Nickel" Quantity="{Binding Path=Nickels}"/>
@@ -21,5 +31,10 @@
             <local:CoinControl Denomination="HalfDollar" Quantity="{Binding Path=HalfDollar}"/>
             <local:CoinControl Denomination="Dollar" Quantity="{Binding Path=Dollar}"/>
         </StackPanel>
+        <TextBlock  Grid.Row="2" >Total:</TextBlock>
+        <TextBlock  Grid.Row="2" Text="{Binding Source=Order, Path=Total }" ></TextBlock>
+        <TextBlock  Grid.Row="3" >Running Total</TextBlock>
+        <TextBlock  Grid.Row="3" Text="{Binding Source=CashRegisterModelView, Path=TotalValue }" />
+        <Button Name="Complete" Grid.Row="4" HorizontalAlignment="Center" Click="CompletePaymentByCash" Width="200"  >Complete the payment</Button>
     </Grid>
 </UserControl>

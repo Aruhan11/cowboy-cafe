@@ -50,8 +50,8 @@
         <TextBlock TextAlignment="Left" Grid.Row="3"  >Total</TextBlock>
         <TextBlock TextAlignment="Right"  Grid.Row="3"  Text="{Binding Path=Total, StringFormat=c}"></TextBlock>
 
-        <Button Name="PaymentByCredit" Grid.Row="4" HorizontalAlignment="Left" Click="OnPaymentByCredit"  >Pay By Credit</Button>
-        <Button Name="PaymentByCash" Grid.Row="4" HorizontalAlignment="Center" Click="OnPaymentByCredit">Pay By Cash</Button>
-        <Button Name="CancelTransaction" Grid.Row="4" HorizontalAlignment="Right" Click="OnPaymentByCredit"  >Cancel Transaction</Button>
+        <Button Name="PaymentByCredit" Grid.Row="4" HorizontalAlignment="Left" >Pay By Credit</Button>
+        <Button Name="PaymentByCash" Grid.Row="4" HorizontalAlignment="Center">Pay By Cash</Button>
+        <Button Name="CancelTransaction" Grid.Row="4" HorizontalAlignment="Right" >Cancel Transaction</Button>
     </Grid>
 </UserControl>

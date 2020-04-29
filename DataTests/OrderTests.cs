@@ -7,9 +7,11 @@ using System.Linq;
 
 namespace CowboyCafe.DataTests
 {
-    class MockOrderItem : IOrderItem
+    public class MockOrderItem : IOrderItem
     { 
         public double Price { get; set; }
+
+        public uint Calories { get; set; }
 
         public List<string> SpecialInstructions { get; set; }
     }

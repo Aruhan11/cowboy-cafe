@@ -6,84 +6,146 @@
     ViewData["Title"] = "Home page";
 }
 
-    <div class="text-center" >
+    <form>
+        <div id="search">
+            <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
+            <input type="submit" value="Search">
+        </div>
+
+        <div id="filters">
+
+            <h4>Category</h4>
+            @foreach (String category in CowboyCafe.Data.Menu.Category)
+            {
+                <label>
+                    <input type="checkbox" name="Category" value="@category" checked="@Model.Category?.Contains(category)" />
+                    @category
+                </label>
+            }
+
+
+            <h4>Calories</h4>
+            <div>
+                Between
+                <input name="CaloriesMin" type="number" min="0" max="1000" step="0.1" placeholder="min" value="@Model.CaloriesMin" />
+                and
+                <input name="CaloriesMax" type="number" min="0" max="1000" step="0.1" placeholder="max" value="@Model.CaloriesMax" />
+            </div>
+
+            <h4>Price</h4>
+            <div>
+                Between
+                <input name="PriceMin" type="number" min="0" max="100" step="0.1" placeholder="min" value="@Model.PriceMin" />
+                and
+                <input name="PriceMax" type="number" min="0" max="100" step="0.1" placeholder="max" value="@Model.PriceMax" />
+            </div>
+
+
+            </div>
+    </form>
+
+
+<div class="text-center" >
         <h1 class="display-4">Cowboy Cafe</h1>
         <p>We at Cowboy Cafe are proud to bring you authentic trail meals from the American West. Shake off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas. Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.</p>
 
         
-        <div class="row" >
-            <div class="column">
-                <h2>Entrees</h2>
-                 @foreach (CowboyCafe.Data.Entree entree in CowboyCafe.Data.Menu.Entrees())
-                  {
-                    <div class="menu-item" style="border: solid">
-                      <p>@entree</p>
-                      <p>Price: @string.Format("{0:C}", entree.Price)</p>
-                      <p>Calories: @entree.Calories</p>
-                    </div>
-                  }
-             </div>
+        <div class="row">
+            @if (Model.Category.Length == 0 || Model.Category.Contains("Entree"))
+            {
+                <div class="column">
+                    <h2>Entrees</h2>
+                    @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
+                    {
+                        @if (item is CowboyCafe.Data.Entree)
+                        {
+                            <div class="menu-item" style="border: solid">
+                                <p>@item</p>
+                                <p>Price: @string.Format("{0:C}", item.Price)</p>
+                                <p>Calories: @item.Calories</p>
+                            </div>
+                        }
+                    }
+                </div>
+
+            }
 
 
-            <div class="column">
-                <h2>Sides</h2>
-                @foreach (CowboyCafe.Data.Side side in CowboyCafe.Data.Menu.Sides())
-                {
-                     <div class="menu-item" style="border: solid">
-                        <p>@side</p>
-                        <p>Price: @string.Format("{0:C}", side.Price)</p>
-                        <p>Calories: @side.Calories</p>
-                       
-                     </div>
-                     <div class="menu-item" style="border: solid">
-                         @{side.Size = CowboyCafe.Data.Size.Medium;}
-                         <p>@side</p>
-                         <p>Price: @string.Format("{0:C}", side.Price)</p>
-                         <p>Calories: @side.Calories</p>
+            @if (Model.Category.Length == 0 || Model.Category.Contains("Side"))
+            {
+                <div class="column">
+                    <h2>Sides</h2>
+                    @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
+                    {
+                        @if (item is CowboyCafe.Data.Side)
+                        {
+                            CowboyCafe.Data.Side side = item as CowboyCafe.Data.Side;
 
-                     </div>
-                     <div class="menu-item" style="border: solid">
-                         @{side.Size = CowboyCafe.Data.Size.Large;}
-                         <p>@side</p>
-                         <p>Price: @string.Format("{0:C}", side.Price)</p>
-                         <p>Calories: @side.Calories</p>
+                            <div class="menu-item" style="border: solid">
+                                <p>@side</p>
+                                <p>Price: @string.Format("{0:C}", side.Price)</p>
+                                <p>Calories: @side.Calories</p>
 
-                     </div>            
-                 }
-               
-            </div>
+                            </div>
+                            <div class="menu-item" style="border: solid">
+                                @{side.Size = CowboyCafe.Data.Size.Medium;}
+                                <p>@item</p>
+                                <p>Price: @string.Format("{0:C}", side.Price)</p>
+                                <p>Calories: @side.Calories</p>
 
-            <div class="column">
-                <h2>Drinks</h2>
+                            </div>
+                            <div class="menu-item" style="border: solid">
+                                @{side.Size = CowboyCafe.Data.Size.Large;}
+                                <p>@side</p>
+                                <p>Price: @string.Format("{0:C}", side.Price)</p>
+                                <p>Calories: @side.Calories</p>
 
-                @foreach (CowboyCafe.Data.Drink drink in CowboyCafe.Data.Menu.Drinks())
-                {
-                    <div class="menu-item" style="border: solid">
-                        <p>@drink</p>
-                        <p>Price: @string.Format("{0:C}", drink.Price)</p>
-                        <p>Calories: @drink.Calories</p>
-                        
-                    </div>
-                    <div class="menu-item" style="border: solid">
-                        @{drink.Size = CowboyCafe.Data.Size.Medium;}
-                        <p>@drink</p>
-                        <p>Price: @string.Format("{0:C}", drink.Price)</p>
-                        <p>Calories: @drink.Calories</p>
+                            </div>
+                        }
 
-                    </div>
-                    <div class="menu-item" style="border: solid">
-                        @{drink.Size = CowboyCafe.Data.Size.Large;}
-                        <p>@drink</p>
-                        <p>Price: @string.Format("{0:C}", drink.Price)</p>
-                        <p>Calories: @drink.Calories</p>
+                    }
 
-                    </div>
-                }
+                </div>
 
-            </div>
+            }
+
+            @if (Model.Category.Length == 0 || Model.Category.Contains("Drink"))
+            {
+                <div class="column">
+                    <h2>Drinks</h2>
+                    @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
+                    {
+                        @if (item is CowboyCafe.Data.Drink)
+                        {
+
+                            CowboyCafe.Data.Drink drink = item as CowboyCafe.Data.Drink;
+                            <div class="menu-item" style="border: solid">
+                                <p>@drink</p>
+                                <p>Price: @string.Format("{0:C}", drink.Price)</p>
+                                <p>Calories: @drink.Calories</p>
+
+                            </div>
+                            <div class="menu-item" style="border: solid">
+                                @{drink.Size = CowboyCafe.Data.Size.Medium;}
+                                <p>@drink</p>
+                                <p>Price: @string.Format("{0:C}", drink.Price)</p>
+                                <p>Calories: @drink.Calories</p>
+
+                            </div>
+                            <div class="menu-item" style="border: solid">
+                                @{drink.Size = CowboyCafe.Data.Size.Large;}
+                                <p>@drink</p>
+                                <p>Price: @string.Format("{0:C}", drink.Price)</p>
+                                <p>Calories: @drink.Calories</p>
+
+                            </div>
+                        }
+
+                    }
+
+                </div>
+
+            }
         </div>
-       
-
-
     </div>
 

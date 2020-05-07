@@ -45,15 +45,15 @@
     </form>
 
 
+
 <div class="text-center" >
         <h1 class="display-4">Cowboy Cafe</h1>
         <p>We at Cowboy Cafe are proud to bring you authentic trail meals from the American West. Shake off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas. Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.</p>
-
-        
-        <div class="row">
+     
+        <div class="flex-columns">
             @if (Model.Category.Length == 0 || Model.Category.Contains("Entree"))
             {
-                <div class="column">
+                <div class="columns" >
                     <h2>Entrees</h2>
                     @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
                     {
@@ -73,7 +73,7 @@
 
             @if (Model.Category.Length == 0 || Model.Category.Contains("Side"))
             {
-                <div class="column">
+                <div class="columns">
                     <h2>Sides</h2>
                     @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
                     {
@@ -111,7 +111,7 @@
 
             @if (Model.Category.Length == 0 || Model.Category.Contains("Drink"))
             {
-                <div class="column">
+                <div class="columns">
                     <h2>Drinks</h2>
                     @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
                     {
@@ -145,7 +145,24 @@
 
                 </div>
 
+             }
+
+            @if (Model.Category.Length == 0 || Model.Category.Contains("Drink"))
+            { 
+                <div class="columns">
+                    <h4>Jerked Soda Flavors</h4>
+                    @foreach (String flavor in CowboyCafe.Data.Menu.Flavor)
+                    {
+                        <div>
+                            @flavor
+                        </div>
+                    }
+                </div>
             }
+            
         </div>
-    </div>
+</div>
+
+
+
 

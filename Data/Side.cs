@@ -21,8 +21,12 @@ namespace CowboyCafe.Data
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
         
+
         private Size size;
 
+        /// <summary>
+        /// the size
+        /// </summary>
         public Size Size
         {
             get { return size; }
@@ -43,6 +47,12 @@ namespace CowboyCafe.Data
         /// Gets the calories of the entree
         /// </summary>
         public abstract uint Calories { get; }
+
+        /// <summary>
+        /// category of side
+        /// </summary>
+        public string Category { get { return "Side"; } }
+
 
         /// <summary>
         /// Get the calories of the side

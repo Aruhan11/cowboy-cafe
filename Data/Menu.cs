@@ -254,6 +254,20 @@ namespace CowboyCafe.Data
         }
 
 
+        /// <summary>
+        /// a list of flavors
+        /// </summary>
+        public static string[] Flavor
+        {
+            get => new string[]
+            {
+             "CreamSoda",
+             "OrangeSoda",
+             "Sarsparilla",
+             "BirchBeer",
+             "RootBeer",
+            };
+        }
 
     }
 }

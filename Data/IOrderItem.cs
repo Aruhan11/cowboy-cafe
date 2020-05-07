@@ -18,6 +18,11 @@ namespace CowboyCafe.Data
         /// The calories of thies order item
         /// </summary>
         uint Calories { get; }
+        
+        /// <summary>
+        /// the category of this prder item
+        /// </summary>
+        string Category { get; }
 
         /// <summary>
         /// The special instructions for this order item

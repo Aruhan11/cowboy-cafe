@@ -30,6 +30,12 @@ namespace Website.Pages
         [BindProperty(SupportsGet = true)]
         public string[] Category { get; set; }
 
+        /// <summary>
+        /// The filtered Flavor
+        /// </summary>
+        [BindProperty(SupportsGet = true)]
+        public string[] Flavor { get; set; }
+
 
         /// <summary>
         /// The minimum Calories
@@ -60,10 +66,42 @@ namespace Website.Pages
         /// </summary>
         public void OnGet()
         {
-            Items = Menu.Search(Items,SearchTerms);
-            Items = Menu.FilterByCategory(Items, Category);
-            Items = Menu.FilterByCalories(Items, CaloriesMin, CaloriesMax);
-            Items = Menu.FilterByPrice(Items, PriceMin, PriceMax);
+                      
+            if (SearchTerms != null)
+            {             
+                Items = from item in Items
+                        where item.ToString() != null && item.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase)
+                         select item;
+            }
+
+            if (Category != null && Category.Length != 0)
+            {
+                Items = Items.Where(item =>
+                    item.Category != null &&
+                    Category.Contains(item.Category)
+                    );
+            }
+
+            if (CaloriesMin != null)
+            {
+                Items = Items.Where(item => (item.Calories >= CaloriesMin));
+            }
+
+            if (CaloriesMax != null)
+            {
+                Items = Items.Where(item => (item.Calories <= CaloriesMax));
+            }
+
+
+            if (PriceMin != null)
+            {
+                Items = Items.Where(item => (item.Price >= PriceMin));
+            }
+
+            if (PriceMax != null)
+            {
+                Items = Items.Where(item => (item.Price <= PriceMax));
+            }
         }
 
         /// <summary>
